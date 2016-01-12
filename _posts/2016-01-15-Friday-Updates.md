@@ -38,3 +38,16 @@
   beginner_tutorials package.
 - To run the talker-listener scripts, need to set `ROS_MASTER_URI` and
   `ROS_IP` on the EV3 to properly connect to `roscore` on the desktop.
+
+## Problems
+- After loading the new image onto the SD card, testing the
+  talker-listener program worked in only one direction.  The Ev3 could
+  only be the talker, not the listener.  Using `roswtf` to try and
+  diagnose.
+- Running `roswtf` did not reveal any errors on the host that were
+  interfering with the program.
+- Running `roswtf` on the robot showed an error that said `host
+  nick-office is unknown`.  The environment variables `ROS_HOSTNAME`,
+  `ROS_IP`, and `ROS_MASTER_URI` needed to be set on the host
+  machine. After exporting these in `~/.bashrc` and restarting the
+  terminal sessions, everything worked.
