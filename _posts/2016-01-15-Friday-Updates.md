@@ -1,4 +1,17 @@
+---
+layout: post
+title:  "Friday update: 1-15-2016"
+categories: Friday-Updates
+---
+
+Testing 123
+
+hello
+
+
 # Memos
+
+Hello here is some stuff.
 
 ## Install Ubuntu 14.04
 
