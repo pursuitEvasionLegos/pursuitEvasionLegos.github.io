@@ -4,14 +4,11 @@ title:  "Friday update: 1-15-2016"
 categories: Friday-Updates
 ---
 
-Testing 123
-
-hello
-
+Week 1 of working with the EV3 and ROS.  We followed multiple
+tutorials, but encountered some bumps along the way.  Below we list
+the issues we had and some workarounds that worked for us.
 
 # Memos
-
-Hello here is some stuff.
 
 ## Install Ubuntu 14.04
 
