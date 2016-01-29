@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Friday update: 1-22-2016"
+title:  "Friday Update"
 categories: Friday-Updates
 ---
 
