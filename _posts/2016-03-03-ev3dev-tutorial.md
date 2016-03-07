@@ -8,6 +8,15 @@ of this tutorial is taken from his github repository.
 - `mkdir ~/brickstrap && cd ~/brickstrap`
 - `brickstrap -b ev3-ev3dev-jessie -d ev3dev-ros create-rootfs`
 - `brickstrap -b ev3-ev3dev-jessie -d ev3dev-ros shell`
+- Add `deb http://ftp.debian.org/debian sid main contrib non-free` to
+  `/etc/apt/sources.list` using `nano /etc/apt/sources.list`
+- `apt-get update`
+- `apt-get install avahi-daemon`
+- Now remove the line you just added to `/etc/apt/sources.list`.  We
+  only wanted to update `avahi-daemon` and its dependencies.  Nothing
+  else.  Edit it again using `nano /etc/apt/sources.list` and comment
+  it out bout adding a `#` in front of the line you added.
+- `apt-get update`
 - `cd /host-rootfs/home/user`
 - `apt-get update`
 - `apt-get install unzip bzip2 build-essential`
@@ -73,7 +82,7 @@ of this tutorial is taken from his github repository.
 	  source ~/catkin_ws/devel/setup.bash
   fi
 
-  export ROS_MASTER_URI=https://hostname-of-master:11311/
+  export ROS_MASTER_URI=http://hostname-of-master:11311/
 
   export ROS_IP=`hostname -I`
 
@@ -94,3 +103,4 @@ of this tutorial is taken from his github repository.
 - `brickstrap -b ev3-ev3dev-jessie -d ev3dev-ros create-tar`
 - `brickstrap -b ev3-ev3dev-jessie -d ev3dev-ros create-image`
 - `sudo dd bs=4M if=/path/to/brickstrap/image of=/path/to/sd/card`
+- `sync`
