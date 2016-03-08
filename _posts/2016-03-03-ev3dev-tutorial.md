@@ -62,8 +62,8 @@ of this tutorial is taken from his github repository.
 - `catkin_init_workspace`
 - `cd ..`
 - `catkin_make`
-- `sudo cp -r /host-rootfs/home/nick/ros_pkgs/* ./src/` NOTE: you may 
-  see a message "sudo: unable to resolve host"...this is ok!
+- `sudo cp -r /host-rootfs/home/user/ros_pkgs/* ./src/` NOTE: you may 
+  see a message "sudo: unable to resolve host"...this is ok! NOTE2: Enter the actual username in place of user
 - `cd ./src`
 - `sudo chown -R robot:robot *`
 - `cd ..`
