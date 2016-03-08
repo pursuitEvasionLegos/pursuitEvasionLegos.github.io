@@ -17,7 +17,7 @@ of this tutorial is taken from his github repository.
   else.  Edit it again using `nano /etc/apt/sources.list` and comment
   it out bout adding a `#` in front of the line you added.
 - `apt-get update`
-- `cd /host-rootfs/home/user`
+- `cd /host-rootfs/home/user` NOTE: you must enter your actual user in place of user
 - `apt-get update`
 - `apt-get install unzip bzip2 build-essential`
 - `wget
@@ -62,14 +62,16 @@ of this tutorial is taken from his github repository.
 - `catkin_init_workspace`
 - `cd ..`
 - `catkin_make`
-- `sudo cp -r /host-rootfs/home/nick/ros_pkgs/* ./src/`
+- `sudo cp -r /host-rootfs/home/nick/ros_pkgs/* ./src/` NOTE: you may 
+  see a message "sudo: unable to resolve host"...this is ok!
 - `cd ./src`
 - `sudo chown -R robot:robot *`
 - `cd ..`
 - `catkin_make`
 - `cd ~/`
 - Now edit `.bashrc` using `nano ~/.bashrc` and add the following
-  lines to the end of the file
+  lines to the end of the file. NOTE: insert the actual master hostname where you see
+  "hostname-of-master"
 
   ```
   if [ -f /opt/ros/indigo/setup.bash ]
@@ -91,7 +93,8 @@ of this tutorial is taken from his github repository.
   ```
 
 - Now edit `/etc/hosts` using `sudo nano /etc/hosts` and add the
-  following lines to the end of the file
+  following lines to the end of the file. NOTE: insert the actual master IP
+  and master hostname.
   ```
   ip-of-master     hostname-of-master
   ```
@@ -102,5 +105,6 @@ of this tutorial is taken from his github repository.
 ## Create image
 - `brickstrap -b ev3-ev3dev-jessie -d ev3dev-ros create-tar`
 - `brickstrap -b ev3-ev3dev-jessie -d ev3dev-ros create-image`
-- `sudo dd bs=4M if=/path/to/brickstrap/image of=/path/to/sd/card`
+- `sudo dd bs=4M if=/path/to/brickstrap/image of=/path/to/sd/card` NOTE: insert
+  the actual paths in place of /path/to/
 - `sync`
